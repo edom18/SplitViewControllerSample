@@ -1,49 +1,43 @@
-//
-//  SVTAppDelegate.m
-//  SplitViewControllerTest
-//
-//  Created by 比留間 和也 on 2014/05/22.
-//  Copyright (c) 2014年 比留間 和也. All rights reserved.
-//
 
 #import "SVTAppDelegate.h"
 
+#import "SVTMenuViewController.h"
+#import "SVTDetailViewController.h"
+
 @implementation SVTAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (BOOL)application:(UIApplication *)application
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // windowの生成
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    // SplitViewControllerを生成
+    UISplitViewController *splitViewController = [[UISplitViewController alloc] init];
+    
+    // メニュー用ViewControllerの生成
+    SVTMenuViewController *menuViewController        = [[SVTMenuViewController alloc] init];
+    UINavigationController *menuNavigationController = [[UINavigationController alloc] initWithRootViewController:menuViewController];
+    
+    // 詳細用ViewControllerの生成
+    SVTDetailViewController *detailViewController = [[SVTDetailViewController alloc] init];
+    UINavigationController  *detailNavigationController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+    
+    // SplitViewControllerのデリゲート先をdetailViewControllerに設定
+    splitViewController.delegate = detailViewController;
+    
+    // 生成したふたつのViewControllerをそれぞれ左から設定する
+    [splitViewController addChildViewController:menuNavigationController];
+    [splitViewController addChildViewController:detailNavigationController];
+    
+    // windowのrootViewControllerとしてSplitViewControllerを設定
+    self.window.rootViewController = splitViewController;
+    
+    // 内容を表示
     [self.window makeKeyAndVisible];
+    
     return YES;
-}
-
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
 @end

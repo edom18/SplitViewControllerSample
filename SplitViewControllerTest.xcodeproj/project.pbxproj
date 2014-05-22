@@ -19,6 +19,8 @@
 		5CABED29192DC2F0005DE1FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CABED11192DC2F0005DE1FF /* UIKit.framework */; };
 		5CABED31192DC2F0005DE1FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CABED2F192DC2F0005DE1FF /* InfoPlist.strings */; };
 		5CABED33192DC2F0005DE1FF /* SplitViewControllerTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CABED32192DC2F0005DE1FF /* SplitViewControllerTestTests.m */; };
+		5CABED3E192DC328005DE1FF /* SVTMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CABED3D192DC328005DE1FF /* SVTMenuViewController.m */; };
+		5CABED41192DC336005DE1FF /* SVTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CABED40192DC336005DE1FF /* SVTDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		5CABED2E192DC2F0005DE1FF /* SplitViewControllerTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SplitViewControllerTestTests-Info.plist"; sourceTree = "<group>"; };
 		5CABED30192DC2F0005DE1FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5CABED32192DC2F0005DE1FF /* SplitViewControllerTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplitViewControllerTestTests.m; sourceTree = "<group>"; };
+		5CABED3C192DC327005DE1FF /* SVTMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVTMenuViewController.h; sourceTree = "<group>"; };
+		5CABED3D192DC328005DE1FF /* SVTMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVTMenuViewController.m; sourceTree = "<group>"; };
+		5CABED3F192DC336005DE1FF /* SVTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVTDetailViewController.h; sourceTree = "<group>"; };
+		5CABED40192DC336005DE1FF /* SVTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVTDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,10 @@
 				5CABED1D192DC2F0005DE1FF /* SVTAppDelegate.m */,
 				5CABED1F192DC2F0005DE1FF /* Images.xcassets */,
 				5CABED14192DC2F0005DE1FF /* Supporting Files */,
+				5CABED3C192DC327005DE1FF /* SVTMenuViewController.h */,
+				5CABED3D192DC328005DE1FF /* SVTMenuViewController.m */,
+				5CABED3F192DC336005DE1FF /* SVTDetailViewController.h */,
+				5CABED40192DC336005DE1FF /* SVTDetailViewController.m */,
 			);
 			path = SplitViewControllerTest;
 			sourceTree = "<group>";
@@ -242,6 +252,8 @@
 			files = (
 				5CABED1E192DC2F0005DE1FF /* SVTAppDelegate.m in Sources */,
 				5CABED1A192DC2F0005DE1FF /* main.m in Sources */,
+				5CABED3E192DC328005DE1FF /* SVTMenuViewController.m in Sources */,
+				5CABED41192DC336005DE1FF /* SVTDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
